@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    url: jdbc:h2:mem:nameDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+  sql:
+    init:
+      data-locations:
+        - classpath:vuelos.sql
+        - classpath:usuarios.sql
+        - classpath:asientos.sql
+        - classpath:reservas.sql
+        - classpath:pagos.sql
+      mode: always

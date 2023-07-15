@@ -1,0 +1,8 @@
+#Spring Profiles
+#con este application.yml le indicamos al DemoApplication de donde debe obtener los datos para el integrationTest
+spring:
+  profiles:
+    active:
+      - ${SCOPE} #aca podria ir integration test o local si quisieramos que utilizara otro properties para levantar la base de datos
+      #- local
+      #- integration_test
