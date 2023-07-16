@@ -33,9 +33,9 @@ public class VuelosServiceTest {
 
         //ARRANGE
         List<VuelosDto> expected = new ArrayList<>();
-        expected.add(new VuelosDto("Avianca","Av180","Buenos Aires","Rio de Janeiro", LocalDateTime.parse("2023-06-29T18:00:00"),LocalDateTime.parse("2023-06-30T09:00:00"),400.00,false));
-        expected.add(new VuelosDto("Aerolineas Argentinas","Ar200","Buenos Aires","Cancun",LocalDateTime.parse("2023-06-28T18:00:00"),LocalDateTime.parse("2023-06-29T21:30:00"),500.00,false));
-        expected.add(new VuelosDto("Panam","Pan150","Buenos Aires","Madrid",LocalDateTime.parse("2023-06-27T18:00:00"),LocalDateTime.parse("2023-06-29T21:30:00"),900.00,true));
+        expected.add(new VuelosDto(1L, "Avianca","Av180","Buenos Aires","Rio de Janeiro", LocalDateTime.parse("2023-06-29T18:00:00"),LocalDateTime.parse("2023-06-30T09:00:00"),400.00,false));
+        expected.add(new VuelosDto(2L, "Aerolineas Argentinas","Ar200","Buenos Aires","Cancun",LocalDateTime.parse("2023-06-28T18:00:00"),LocalDateTime.parse("2023-06-29T21:30:00"),500.00,false));
+        expected.add(new VuelosDto(3L, "Panam","Pan150","Buenos Aires","Madrid",LocalDateTime.parse("2023-06-27T18:00:00"),LocalDateTime.parse("2023-06-29T21:30:00"),900.00,true));
 
         //ACT
         List<VuelosDto> result = vuelosService.buscarVuelos();
